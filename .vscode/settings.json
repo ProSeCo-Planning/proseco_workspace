@@ -1,0 +1,26 @@
+{
+    "C_Cpp.clang_format_path": "/usr/bin/clang-format",
+    "C_Cpp.default.intelliSenseMode": "gcc-x64",
+    "C_Cpp.default.cStandard": "c17",
+    "C_Cpp.default.cppStandard": "gnu++17",
+    "C_Cpp.intelliSenseEngineFallback": "Enabled",
+    "C_Cpp.intelliSenseEngine": "Default",
+    "C_Cpp.intelliSenseCachePath": "${workspaceFolder}/.vscode/vscode-cpptools",
+    "files.associations": {
+        "array": "cpp",
+        "bitset": "cpp",
+        "string_view": "cpp",
+        "initializer_list": "cpp",
+        "ranges": "cpp",
+        "utility": "cpp",
+        "unordered_map": "cpp"
+    },
+    "python.autoComplete.extraPaths": [
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ],
+    "ros.distro": "noetic",
+    
+}

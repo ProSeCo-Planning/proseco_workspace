@@ -1,0 +1,79 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "clean",
+      "type": "shell",
+      "command": "rm -rf devel build devel_isolated build_isolated",
+      "problemMatcher": []
+    },
+    {
+      "label": "format (Python and C++)",
+      "type": "shell",
+      "command": "cd ${workspaceFolder} && ./format_all.bash ",
+      "problemMatcher": []
+    },
+    {
+      "label": "build (Debug)",
+      "type": "shell",
+      "command": ". /opt/ros/noetic/setup.sh && catkin_make_isolated --cmake-args -DCMAKE_BUILD_TYPE=DEBUG -DPROSECO_RUN_TEST=ON -DPYTHON_EXECUTABLE:FILEPATH=/usr/bin/python3",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "clear": true
+      },
+      "problemMatcher": {
+        "base": "$gcc",
+        "fileLocation": [
+          "absolute"
+        ]
+      }
+    },
+    {
+      "label": "build (without Tests)",
+      "type": "shell",
+      "command": ". /opt/ros/noetic/setup.sh && catkin_make_isolated --cmake-args -DCMAKE_BUILD_TYPE=DEBUG -DPROSECO_RUN_TEST=OFF -DPYTHON_EXECUTABLE:FILEPATH=/usr/bin/python3",
+      "presentation": {
+        "clear": true
+      },
+      "problemMatcher": {
+        "base": "$gcc",
+        "fileLocation": [
+          "absolute"
+        ]
+      }
+    },
+    {
+      "label": "build (Release)",
+      "type": "shell",
+      "command": ". /opt/ros/noetic/setup.sh && catkin_make_isolated --cmake-args -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_CXX_FLAGS='-Werror -Wall' -Wextra -DPROSECO_RUN_TEST=ON -DPYTHON_EXECUTABLE:FILEPATH=/usr/bin/python3",
+      "presentation": {
+        "clear": true
+      },
+      "problemMatcher": {
+        "base": "$gcc",
+        "fileLocation": [
+          "absolute"
+        ]
+      }
+    },
+    {
+      "label": "install (Release)",
+      "type": "shell",
+      "command": ". /opt/ros/noetic/setup.sh && catkin_make_isolated --install --cmake-args -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_CXX_FLAGS='-Werror -Wall' -Wextra -DPROSECO_RUN_TEST=ON -DPYTHON_EXECUTABLE:FILEPATH=/usr/bin/python3",
+      "presentation": {
+        "clear": true
+      },
+      "problemMatcher": {
+        "base": "$gcc",
+        "fileLocation": [
+          "absolute"
+        ]
+      }
+    }
+  ]
+}

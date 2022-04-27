@@ -1,0 +1,31 @@
+{
+    "configurations": [
+        {
+            "name": "Linux gcc",
+            "includePath": [
+                "${workspaceFolder}/src/proseco_planning",
+                "${workspaceFolder}/src/proseco_planning/include",
+                "${workspaceFolder}/src/proseco_planning/lib/json/include",
+                "${workspaceFolder}/src/ros_proseco_planning",
+                "${workspaceFolder}/src/ros_proseco_planning/include",
+                "/opt/ros/noetic/include"
+            ],
+            "browse": {
+                "path": [
+                    "${workspaceFolder}/src/proseco_planning/src",
+                    "${workspaceFolder}/src/proseco_planning/include",
+                    "${workspaceFolder}/src/ros_proseco_planning/src",
+                    "${workspaceFolder}/src/ros_proseco_planning/include"
+                ],
+                "databaseFilename": "${workspaceFolder}/.vscode/vscode-cpptools/browse.vc.db",
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}

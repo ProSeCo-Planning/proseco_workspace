@@ -1,0 +1,103 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "configurations": [
+    {
+      "name": "Python: Optimizer",
+      "type": "python",
+      "request": "launch",
+      "program": "optimization.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/src/ros_proseco_planning/python/proseco/hyperparameter_optimization/",
+      "args": ["-f", "optimizer", "-c", "config.json"]
+    },
+    {
+      "name": "Python: Analyzer",
+      "type": "python",
+      "request": "launch",
+      "program": "optimization.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/src/ros_proseco_planning/python/proseco/hyperparameter_optimization/",
+      "args": ["-f", "analyzer", "-c", "config.json"]
+    },
+    {
+      "name": "Python: Evaluator",
+      "type": "python",
+      "request": "launch",
+      "program": "evaluator.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/src/ros_proseco_planning/python/proseco/evaluator/",
+      "args": ["-c", "config.json", "-y", "-d"]
+    },
+    {
+      "name": "Python: Dashboard",
+      "type": "python",
+      "request": "launch",
+      "program": "index.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/src/ros_proseco_planning/python/proseco/dashboard/",
+      "args": []
+    },
+    {
+      "name": "Python: Tester",
+      "type": "python",
+      "request": "launch",
+      "program": "tester.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/src/ros_proseco_planning/python/proseco/testing/",
+      "args": []
+    },
+    {
+      "name": "Python: IRL Training",
+      "type": "python",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/src/ros_proseco_planning/python/proseco/inverse_reinforcement_learning/",
+      "program": "training.py",
+      "args": ["--config", "config.json", "--debug"],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Python: IRL Inference",
+      "type": "python",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/src/ros_proseco_planning/python/proseco/inverse_reinforcement_learning/",
+      "program": "inference.py",
+      "args": ["--config", "config.json", "--debug"],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "C++: ProSeCo Planning Node",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/devel_isolated/ros_proseco_planning/lib/ros_proseco_planning/proseco_planning_node",
+      "args": ["ros_proseco_planning_node", "example_options.json", "sc00.json"],
+      "cwd": "${workspaceFolder}",
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "build (Debug)"
+    },
+    {
+      "name": "C++: ProSeCo Planning Tests",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/devel_isolated/proseco_planning/lib/proseco_planning/proseco_planning_test",
+      "cwd": "${workspaceFolder}",
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "build (without Tests)"
+    }
+  ]
+}
