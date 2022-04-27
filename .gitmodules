@@ -1,0 +1,10 @@
+[submodule "proseco_planning"]
+	path = src/proseco_planning
+	url = https://github.com/ProSeCo-Planning/proseco_planning.git
+	branch = main
+	shallow = true
+[submodule "ros_proseco_planning"]
+	path = src/ros_proseco_planning
+	url = https://github.com/ProSeCo-Planning/ros_proseco_planning.git
+	branch = main
+	shallow = true
