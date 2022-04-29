@@ -86,7 +86,7 @@ python3 proseco/evaluator/evaluator.py -c config.json -y
 
 ### Visualize
 
-Navigate to the `proseco_workspace/src/ros_proseco_planning/python` directory and run the following command to launch a dashboard to inspect the results from the evaluation of the ProSeCo planner on a specific config.
+Navigate to the `proseco_workspace/src/ros_proseco_planning/python` directory and run the following command to launch a dashboard (http://localhost:8050) to inspect the results from the evaluation of the ProSeCo planner on a specific config.
 
 ```bash
 python3 proseco/dashboard/index.py
