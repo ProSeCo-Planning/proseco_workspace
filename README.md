@@ -19,7 +19,7 @@ git clone --recurse-submodules --shallow-submodules https://github.com/ProSeCo-P
 Once the project is cloned the workspace can be opened with VS Code:
 
 ```bash
-code ./proseco_ws/proseco.code-workspace
+code ./proseco_workspace/proseco.code-workspace
 ```
 
 ### Local Setup
@@ -43,7 +43,7 @@ Install Docker for Windows, Mac or Linux (https://docs.docker.com/get-docker/)
 #### Start the Docker Container
 
 ```bash
-docker run -dit --restart unless-stopped --name proseco -p 8050:8050 --mount type=bind,source="$(pwd)"/proseco_ws,target=/proseco_ws karlkurzer/proseco:devel
+docker run -dit --restart unless-stopped --name proseco -p 8050:8050 --mount type=bind,source="$(pwd)"/proseco_workspace,target=/proseco_workspace karlkurzer/proseco:devel
 ```
 
 #### Attach to the Docker
@@ -54,7 +54,7 @@ Either using `docker attach proseco` or for example Visual Studio Code (https://
 
 ### Build
 
-Navigate to the `proseco_ws` directory and run the following command to build the project.
+Navigate to the `proseco_workspace` directory and run the following command to build the project.
 
 ```bash
 . /opt/ros/noetic/setup.sh && catkin_make_isolated --cmake-args -DCMAKE_BUILD_TYPE=RELEASE -DPROSECO_RUN_TEST=ON -DPYTHON_EXECUTABLE:FILEPATH=/usr/bin/python3
@@ -62,7 +62,7 @@ Navigate to the `proseco_ws` directory and run the following command to build th
 
 ### Install Python Package
 
-Navigate to the `proseco_ws/src/ros_proseo_planning/python` directory and run the following command to install the ProSeCo Python package.
+Navigate to the `proseco_workspace/src/ros_proseo_planning/python` directory and run the following command to install the ProSeCo Python package.
 
 ```bash
 pip3 install -e .
@@ -70,7 +70,7 @@ pip3 install -e .
 
 ### Source
 
-Navigate to the `proseco_ws` directory and run the following command to source the project.
+Navigate to the `proseco_workspace` directory and run the following command to source the project.
 
 ```bash
 . ./devel_isolated/setup.bash
@@ -78,7 +78,7 @@ Navigate to the `proseco_ws` directory and run the following command to source t
 
 ### Evaluate
 
-Navigate to the `proseco_ws/src/ros_proseo_planning/python` directory and run the following command to evaluate the ProSeCo planner on a specific config. _Note a roscore needs to be running `roscore`_
+Navigate to the `proseco_workspace/src/ros_proseo_planning/python` directory and run the following command to evaluate the ProSeCo planner on a specific config. _Note a roscore needs to be running `roscore`_
 
 ```bash
 python3 proseco/evaluator/evaluator.py -c config.json -y
@@ -86,7 +86,7 @@ python3 proseco/evaluator/evaluator.py -c config.json -y
 
 ### Visualize
 
-Navigate to the `proseco_ws/src/ros_proseo_planning/python` directory and run the following command to launch a dashboard to inspect the results from the evaluation of the ProSeCo planner on a specific config.
+Navigate to the `proseco_workspace/src/ros_proseo_planning/python` directory and run the following command to launch a dashboard to inspect the results from the evaluation of the ProSeCo planner on a specific config.
 
 ```bash
 python3 proseco/dashboard/index.py
