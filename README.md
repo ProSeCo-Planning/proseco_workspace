@@ -62,7 +62,7 @@ Navigate to the `proseco_workspace` directory and run the following command to b
 
 ### Install Python Package
 
-Navigate to the `proseco_workspace/src/ros_proseo_planning/python` directory and run the following command to install the ProSeCo Python package.
+Navigate to the `proseco_workspace/src/ros_proseco_planning/python` directory and run the following command to install the ProSeCo Python package.
 
 ```bash
 pip3 install -e .
@@ -78,7 +78,7 @@ Navigate to the `proseco_workspace` directory and run the following command to s
 
 ### Evaluate
 
-Navigate to the `proseco_workspace/src/ros_proseo_planning/python` directory and run the following command to evaluate the ProSeCo planner on a specific config. _Note a roscore needs to be running `roscore`_
+Navigate to the `proseco_workspace/src/ros_proseco_planning/python` directory and run the following command to evaluate the ProSeCo planner on a specific config. _Note a roscore needs to be running `roscore`_
 
 ```bash
 python3 proseco/evaluator/evaluator.py -c config.json -y
@@ -86,7 +86,7 @@ python3 proseco/evaluator/evaluator.py -c config.json -y
 
 ### Visualize
 
-Navigate to the `proseco_workspace/src/ros_proseo_planning/python` directory and run the following command to launch a dashboard to inspect the results from the evaluation of the ProSeCo planner on a specific config.
+Navigate to the `proseco_workspace/src/ros_proseco_planning/python` directory and run the following command to launch a dashboard to inspect the results from the evaluation of the ProSeCo planner on a specific config.
 
 ```bash
 python3 proseco/dashboard/index.py
