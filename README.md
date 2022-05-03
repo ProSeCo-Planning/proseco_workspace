@@ -1,6 +1,6 @@
 # Visual Studio Code Workspace for ProSeCo Planning
 
-This Visual Studio Code workspace is a convenient way to work with the ProSeCo Planning project. If you want to use a different IDE it is still advisable to use this workspace as a top level folder of the ROS project.
+This Visual Studio Code workspace is convenient for working with the ProSeCo Planning project. However, if you want to use a different IDE it is still advisable to use this workspace as a top-level folder of the ROS project.
 
 ### Configured Tasks (VS Code)
 
@@ -16,7 +16,7 @@ The debugging tasks are configured at `.vscode/launch.json`.
 git clone --recurse-submodules --shallow-submodules https://github.com/ProSeCo-Planning/proseco_workspace.git
 ```
 
-Once the project is cloned the workspace can be opened with VS Code:
+Once the project is cloned, the workspace can be opened with VS Code:
 
 ```bash
 code ./proseco_workspace/proseco.code-workspace
@@ -38,7 +38,7 @@ code ./proseco_workspace/proseco.code-workspace
 
 #### Install Docker
 
-Install Docker for Windows, Mac or Linux (https://docs.docker.com/get-docker/)
+Install Docker for Windows, Mac, or Linux (https://docs.docker.com/get-docker/)
 
 #### Start the Docker Container
 
@@ -48,7 +48,7 @@ docker run -dit --restart unless-stopped --name proseco -p 8050:8050 --mount typ
 
 #### Attach to the Docker
 
-Either using `docker attach proseco` or for example Visual Studio Code (https://code.visualstudio.com/docs/remote/attach-container).
+Either using `docker attach proseco` or Visual Studio Code (https://code.visualstudio.com/docs/remote/attach-container).
 
 ## Commands
 
