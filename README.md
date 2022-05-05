@@ -2,14 +2,6 @@
 
 This Visual Studio Code workspace is convenient for working with the ProSeCo Planning project. However, if you want to use a different IDE it is still advisable to use this workspace as a top-level folder of the ROS project.
 
-### Configured Tasks (VS Code)
-
-The most important tasks are configured at `.vscode/tasks.json`.
-
-### Configured Debugging (VS Code)
-
-The debugging tasks are configured at `.vscode/launch.json`.
-
 ## Setup
 
 ```bash
@@ -22,19 +14,7 @@ Once the project is cloned, the workspace can be opened with VS Code:
 code ./proseco_workspace/proseco.code-workspace
 ```
 
-### Local Setup
-
-#### Requirements
-
-- Ubuntu 20.04 (Focal)
-- ROS Noetic Ninjemys
-- Python 3.8
-- python3-pip
-- libeigen3
-- libcairo2-dev
-- swig4.0
-
-### Docker Setup
+### Docker Setup (recommended)
 
 #### Install Docker
 
@@ -49,6 +29,18 @@ docker run -dit --restart unless-stopped --name proseco -p 8050:8050 --mount typ
 #### Attach to the Docker
 
 Either using `docker attach proseco` or Visual Studio Code (https://code.visualstudio.com/docs/remote/attach-container).
+
+### Local Setup
+
+#### Requirements
+
+- Ubuntu 20.04 (Focal)
+- ROS Noetic Ninjemys
+- Python 3.8
+- python3-pip
+- libeigen3
+- libcairo2-dev
+- swig4.0
 
 ## Commands
 
@@ -91,3 +83,11 @@ Navigate to the `proseco_workspace/src/ros_proseco_planning/python` directory an
 ```bash
 python3 proseco/dashboard/index.py
 ```
+
+### Configured Tasks (VS Code)
+
+The most important tasks are configured at `.vscode/tasks.json`.
+
+### Configured Debugging (VS Code)
+
+The debugging tasks are configured at `.vscode/launch.json`.
